@@ -88,7 +88,7 @@ include_once "import/excel_reader2.php";
                     // $temp_date = $value[1];
                 }
                 ?>
-                <script> location.replace("?menu=data_transaksi&pesan_success=Data berhasil disimpan");</script>
+                <script> location.replace("?menu=data_produk&pesan_success=Data berhasil disimpan");</script>
                 <?php
             }
 
@@ -96,7 +96,7 @@ include_once "import/excel_reader2.php";
                 $sql = "TRUNCATE transaksi";
                 $db_object->db_query($sql);
                 ?>
-                <script> location.replace("?menu=data_transaksi&pesan_success=Data transaksi berhasil dihapus");</script>
+                <script> location.replace("?menu=data_produk&pesan_success=Data transaksi berhasil dihapus");</script>
                 <?php
             }
 

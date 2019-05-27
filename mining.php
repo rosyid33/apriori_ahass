@@ -128,7 +128,7 @@ function mining_process($db_object, $min_support, $min_confidence, $start_date, 
     foreach ($item_list as $key => $item) {
         $jumlah = jumlah_itemset1($dataTransaksi, $item);
         $support = ($jumlah/$jumlah_transaksi) * 100;
-        $lolos = (price_format($support)>=$min_support_relative)?"1":"0";
+        $lolos = (($support)>=$min_support_relative)?"1":"0";
         $valueIn[] = "('$item','$jumlah','$support','$lolos','$id_process')";
         if($lolos){
             $itemset1[] = $item;//item yg lolos itemset1
@@ -203,7 +203,7 @@ function mining_process($db_object, $min_support, $min_confidence, $start_date, 
                         $NilaiAtribut2[] = $variance2;
 
                         $support2 = ($jml_itemset2/$jumlah_transaksi) * 100;
-                        $lolos = (price_format($support2) >= $min_support_relative)? 1:0;
+                        $lolos = (($support2) >= $min_support_relative)? 1:0;
                         
                         $valueIn_itemset2[] = "('$variance1','$variance2','$jml_itemset2','$support2','$lolos','$id_process')";
                         if($lolos){
@@ -314,7 +314,7 @@ function mining_process($db_object, $min_support, $min_confidence, $start_date, 
                             //$jml_itemset3 = get_count_itemset3($db_object, $itemset1, $itemset2, $itemset3, $start_date, $end_date);
                             $jml_itemset3 = jumlah_itemset3($dataTransaksi, $itemset1, $itemset2, $itemset3);
                             $support3 = ($jml_itemset3/$jumlah_transaksi) * 100;
-                            $lolos = (price_format($support3) >= $min_support_relative)? 1:0;
+                            $lolos = (($support3) >= $min_support_relative)? 1:0;
                             
                             $valueIn_itemset3[] = "('$itemset1','$itemset2','$itemset3','$jml_itemset3','$support3','$lolos','$id_process')";
                             

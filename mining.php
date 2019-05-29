@@ -598,7 +598,7 @@ function hitung_confidence($db_object, $supp_xuy, $min_support, $min_confidence,
         $supp_x = $nilai_support_x;//$row1_['support'];
         $conf = ($supp_xuy/$supp_x)*100;
         //lolos seleksi min confidence itemset3
-        $lolos = (round($conf, 4) >= $min_confidence)? 1:0;
+        $lolos = (format4desimal($conf) >= $min_confidence)? 1:0;
         
         //hitung korelasi lift
         $jumlah_kemunculanAB = jumlah_itemset3($dataTransaksi, $atribut1, $atribut2, $atribut3);
@@ -666,7 +666,7 @@ function hitung_confidence1($db_object, $supp_xuy, $min_support, $min_confidence
             $supp_x = $nilai_support_x;//$row4_['support'];
             $conf = ($supp_xuy/$supp_x)*100;
             //lolos seleksi min confidence itemset3
-            $lolos = (round($conf, 4) >= $min_confidence)? 1:0;
+            $lolos = (format4desimal($conf) >= $min_confidence)? 1:0;
             
             //hitung korelasi lift
             $jumlah_kemunculanAB = jumlah_itemset3($dataTransaksi, $atribut1, $atribut2, $atribut3);
@@ -723,7 +723,7 @@ function hitung_confidence2($db_object, $supp_xuy, $min_support, $min_confidence
             $supp_x = $nilai_support_x;//$row1_['support'];
             $conf = ($supp_xuy/$supp_x)*100;
             //lolos seleksi min confidence itemset3
-            $lolos = (round($conf, 4) >= $min_confidence)? 1:0;
+            $lolos = (format4desimal($conf) >= $min_confidence)? 1:0;
             
             //hitung korelasi lift
             $jumlah_kemunculanAB = jumlah_itemset2($dataTransaksi, $atribut1, $atribut2);

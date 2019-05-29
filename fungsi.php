@@ -790,6 +790,9 @@ function price_format($value){
 	return number_format($value,2, ',', '.');
 }
 
+function format4desimal($value){
+	return number_format($value,4, ',', '.');
+}
 /**
  * cetak link
  */

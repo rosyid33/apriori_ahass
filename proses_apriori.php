@@ -87,15 +87,22 @@ include_once "display_mining.php";
                                 <div class="col-lg-6 " >
                                     <div class="form-group">
                                         <label>Min Support: </label>
-                                        <input name="min_support" type="text" 
-                                               value="<?php echo $_POST['min_support']; ?>"
-                                               class="form-control" placeholder="Min Support">
+                                       <select name="min_support" class="form-control">
+                                            <option value=""></option>
+                                            <option value="30" <?php echo ($_POST['min_support']==30?"selected":"") ?> >30</option>
+                                            <option value="25" <?php echo ($_POST['min_support']==25?"selected":"") ?>>25</option>
+                                            <option value="35" <?php echo ($_POST['min_support']==35?"selected":"") ?>>35</option>
+                                        </select>
+                                        
                                     </div>
                                     <div class="form-group">
                                         <label>Min Confidence: </label>
-                                        <input name="min_confidence" type="text"
-                                               value="<?php echo $_POST['min_confidence']; ?>"
-                                               class="form-control" placeholder="Min Confidence">
+                                       <select name="min_confidence" class="form-control">
+                                            <option value=""></option>
+                                            <option value="60" <?php echo ($_POST['min_confidence']==60?"selected":"") ?> >60</option>
+                                            <option value="65" <?php echo ($_POST['min_confidence']==65?"selected":"") ?> >65</option>
+                                            <option value="70" <?php echo ($_POST['min_confidence']==70?"selected":"") ?> >70</option>
+                                        </select>
                                     </div>
                                     <input type="hidden" name="id_process" value="<?php echo $id_process; ?>">
                                     <div class="form-group">
@@ -169,10 +176,24 @@ include_once "display_mining.php";
 
                         <div class="col-lg-6 " >
                             <div class="form-group">
-                                <input name="min_support" type="text" class="form-control" placeholder="Min Support">
+                                <!-- <input name="min_support" type="text" class="form-control" placeholder="Min Support"> -->
+                                <label>Min support</label>
+                                <select name="min_support" class="form-control">
+                                            <option value=""></option>
+                                            <option value="30">30</option>
+                                            <option value="25">25</option>
+                                            <option value="35">35</option>
+                                        </select>
                             </div>
                             <div class="form-group">
-                                <input name="min_confidence" type="text" class="form-control" placeholder="Min Confidence">
+                                <!-- <input name="min_confidence" type="text" class="form-control" placeholder="Min Confidence"> -->
+                                <label>Min confidence</label>
+                                <select name="min_confidence" class="form-control">
+                                            <option value=""></option>
+                                            <option value="60">60</option>
+                                            <option value="65">65</option>
+                                            <option value="70">70</option>
+                                        </select>
                             </div>
                             <div class="form-group">
                                 <input name="submit" type="submit" value="Proses" class="btn btn-success">

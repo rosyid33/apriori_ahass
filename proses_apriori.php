@@ -100,7 +100,7 @@ include_once "display_mining.php";
                                        <select name="min_confidence" class="form-control">
                                             <option value=""></option>
                                             <option value="60" <?php echo ($_POST['min_confidence']==60?"selected":"") ?> >60</option>
-                                            <option value="65" <?php echo ($_POST['min_confidence']==65?"selected":"") ?> >65</option>
+                                            <option value="75" <?php echo ($_POST['min_confidence']==75?"selected":"") ?> >75</option>
                                             <option value="70" <?php echo ($_POST['min_confidence']==70?"selected":"") ?> >70</option>
                                         </select>
                                     </div>
@@ -191,7 +191,7 @@ include_once "display_mining.php";
                                 <select name="min_confidence" class="form-control">
                                             <option value=""></option>
                                             <option value="60">60</option>
-                                            <option value="65">65</option>
+                                            <option value="75">75</option>
                                             <option value="70">70</option>
                                         </select>
                             </div>
